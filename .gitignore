@@ -1,5 +1,38 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+*.key
+*.pem
+*.secret
+*.crt
+*.token
+*_secrets
+*secret.js
+
+*.swp
+*.swo
+.vimrc
+.nvimrc
+
+.pnpm-store
+.tsbuildinfo
+.build-analytics
+.husky/_
+
+*.log.*
+.pnpm-debug.log*
+
+test-results/
+junit.xml
+
+
 # Compiled output
 /dist
 /tmp
