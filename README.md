@@ -5,8 +5,8 @@ An Angular 19+ mini-application that demonstrates working with a reactive state 
 ## Description
 
 The application consists of two pages:
--**Main page** — a page with a button to go to the second page
--**Second page** — a list of items with a checkbox, a count of the selected items and their total value
+- **Main page** — a page with a button to go to the second page
+- **Second page** — a list of items with a checkbox, a count of the selected items and their total value
 
 ## Technology stack
 
