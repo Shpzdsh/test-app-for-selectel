@@ -1,59 +1,66 @@
 # TestAppForSelectel
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Мини-приложение на Angular 19+, демонстрирующее работу с реактивным состоянием на основе Signals и Standalone Components.
 
-## Development server
+## Description
 
-To start a local development server, run:
+Приложение состоит из двух страниц:
+-**Главная страница** — страница с кнопкой для перехода на вторую страницу
+-**Страница меню**- — список элементов с checkbox, подсчётом выбранных элементов и их общеe значение
 
+## Technology stack
+
+- **Angular** 19+
+- **TypeScript**
+- **Standalone Components**
+- **Signals**
+- **Angular Router**
+- **SCSS**
+
+## Installation and startup
+
+### Требования
+- Node.js >= 18.x
+- npm >= 9.x
+
+### Шаги установки
+1. **Клонируйте репозиторий**:
+```bash
+git clone <repository-url>
+cd test-app-for-selectel
+```
+
+2. **Установите зависимости**:
+```bash
+npm install
+```
+
+3. **Запустите приложение**
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. **Откройте браузер и перейдите по адресу**
+```http://localhost:4200/```
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Функционал
 
-```bash
-ng generate component component-name
-```
+### Главная страница
+- **Кнопка ""**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Вторая страница
 
-```bash
-ng generate --help
-```
+- **Отображение списка элементов с checkbox**
+- **Показывает название текущего раздела**
+- **Считает количество выбранных элементов**
+- **Считает общую стоимость выбранных элементов**
+- **Кнопки "Select all" / "Deselect all"**
+- **Переключение между разделами (type1, type2)**
 
-## Building
+## Data
 
-To build the project run:
+Все данные хранятся статично в сервисе MenuStateService. В реальном проекте можно заменить на HTTP-запросы к backend.
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Author
+Sidorov Valentin

@@ -1,0 +1,13 @@
+<div class="checkbox-item" [class.selected]="item.selected">
+  <label class="checkbox-label">
+    <input
+      type="checkbox"
+      [checked]="item.selected"
+      (change)="onToggle()"
+    />
+    <div class="item-content">
+      <span class="item-label">{{ item.label }}</span>
+      <span class="item-value">Value: {{ item.value }}</span>
+    </div>
+  </label>
+</div>

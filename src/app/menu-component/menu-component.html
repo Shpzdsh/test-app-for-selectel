@@ -1,0 +1,43 @@
+<div class="menu-page">
+  <app-menu-header-component
+    [currentSection]="menuState.currentSection()"
+    [selectedCount]="menuState.selctedCount()"
+    [totalValue]="menuState.totalValue()"
+  />
+
+  <div class="menu-content">
+    <app-menu-sidebar-component
+      [sections]="menuState.sections"
+      [currentSection]="menuState.currentSection()"
+      (sectionChange)="onSectionChange($event)"
+    />
+
+    <main class="main-content">
+      <div class="controls">
+        <button (click)="menuState.selectAll()" class="btn btn-sm">
+          Select all
+        </button>
+        <button (click)="menuState.deselectAll()" class="btn btn-sm">
+          Deselect all
+        </button>
+      </div>
+
+      <div class="items-list">
+        @for (item of menuState.filteredItems(); track item.id) {
+          <app-checkbox-item-component
+            [item]="item"
+            (toggle)="onToggleItem($event)"
+          />
+        } @empty {
+          <div class="empty-state">
+            Not found elements!
+          </div>
+        }
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav">
+    <a routerLink="/" class="back-link">Home</a>
+  </nav>
+</div>

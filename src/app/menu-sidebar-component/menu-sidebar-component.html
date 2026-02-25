@@ -1,0 +1,13 @@
+<aside class="sidebar">
+  <nav class="sidebar-nav">
+    @for (section of sections; track section) {
+      <button
+        [class.active]="currentSection === section"
+        (click)="onSectionClick(section)"
+        class="nav-item"
+      >
+        {{ section }}
+      </button>
+    }
+  </nav>
+</aside>
